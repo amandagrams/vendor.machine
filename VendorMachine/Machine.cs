@@ -104,10 +104,6 @@ namespace VendorMachine.Domain
             
             foreach (var product in productRequestByUser)
             {
-                //var count = machineProducts.Count(p => p.Name == product.Name);
-                //if (count <= 0)
-                //    return false;
-               
                 if (!(machineProducts.Remove(machineProducts.FirstOrDefault(p => p.Name == product.Name))))
                     return false;
             }
